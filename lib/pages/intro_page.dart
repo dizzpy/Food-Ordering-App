@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:food_odering_app/themes/color.dart';
 
-class IntroPage extends StatelessWidget {
+class IntroPage extends StatefulWidget {
   const IntroPage({super.key});
 
+  @override
+  State<IntroPage> createState() => _IntroPageState();
+}
+
+class _IntroPageState extends State<IntroPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,7 +22,7 @@ class IntroPage extends StatelessWidget {
             // button
             GestureDetector(
               onTap: () {
-                Navigator.pushNamed(context, '/home');
+                Navigator.pushNamed(context, '/dashboard');
               },
               child: Container(
                 decoration: BoxDecoration(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_odering_app/pages/dashboard.dart';
 import 'package:food_odering_app/pages/intro_page.dart';
 
 void main() {
@@ -12,9 +13,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: IntroPage(),
+      home: DashboardPage(),
+      theme: ThemeData(
+        useMaterial3: true,
+      ),
       routes: {
         '/intro': (context) => const IntroPage(),
+        '/dashboard': (context) => const DashboardPage(),
       },
     );
   }
