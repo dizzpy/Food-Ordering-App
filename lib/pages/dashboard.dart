@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:food_odering_app/pages/nav/account_page.dart';
 import 'package:food_odering_app/pages/nav/home_page.dart';
 import 'package:food_odering_app/pages/nav/orders_page.dart';
@@ -13,6 +13,7 @@ class DashboardPage extends StatefulWidget {
 
 class _DashboardPageState extends State<DashboardPage> {
   int currentPageIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,49 +27,50 @@ class _DashboardPageState extends State<DashboardPage> {
         destinations: [
           NavigationDestination(
             icon: SvgPicture.asset(
-              'lib/images/icons/home.svg',
+              currentPageIndex == 0
+                  ? 'lib/images/icons/home_filled.svg'
+                  : 'lib/images/icons/home_outline.svg',
               width: 24,
               height: 24,
+              // ignore: deprecated_member_use
+              // color: currentPageIndex == 0 ? kPrimaryGreen : Colors.grey,
             ),
             label: 'Home',
           ),
           NavigationDestination(
             icon: SvgPicture.asset(
-              'lib/images/icons/receipt.svg',
+              currentPageIndex == 1
+                  ? 'lib/images/icons/receipt_filled.svg'
+                  : 'lib/images/icons/receipt_outline.svg',
               width: 24,
               height: 24,
+              // ignore: deprecated_member_use
+              // color: currentPageIndex == 1 ? kPrimaryGreen : Colors.grey,
             ),
             label: 'Orders',
           ),
           NavigationDestination(
             icon: SvgPicture.asset(
-              'lib/images/icons/profile.svg',
+              currentPageIndex == 2
+                  ? 'lib/images/icons/profile_filled.svg'
+                  : 'lib/images/icons/profile_outline.svg',
               width: 24,
               height: 24,
+              // ignore: deprecated_member_use
+              // color: currentPageIndex == 2 ? kPrimaryGreen : Colors.grey,
             ),
             label: 'Account',
           ),
         ],
       ),
-      body: [
-        HomePage(),
-        OrderPage(),
-        AccountPage(),
-      ][currentPageIndex],
+      body: IndexedStack(
+        index: currentPageIndex,
+        children: const [
+          HomePage(), // Assuming this is the correct page
+          OrderPage(),
+          AccountPage(),
+        ],
+      ),
     );
   }
 }
-
-// children: [
-//             // Row location + cart icon
-
-//             // search bar
-
-//             // title "Recommend for you"
-
-//             // items card rows
-
-//             // banner
-
-//             // food catogory tab bar
-//           ],
