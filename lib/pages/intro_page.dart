@@ -6,13 +6,41 @@ class IntroPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text(
-          'Intro Page',
-          style: TextStyle(color: kPrimaryGreen),
+    return Scaffold(
+        body: SafeArea(
+      child: Center(
+        child: Column(
+          children: [
+            // top spacing
+            Spacer(),
+
+            // button
+            GestureDetector(
+              onTap: () {},
+              child: Container(
+                decoration: BoxDecoration(
+                  color: kPrimaryGreen,
+                  borderRadius: BorderRadius.circular(6.0),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 50.0, vertical: 15.0),
+                  child: Text(
+                    'Get Started',
+                    style: TextStyle(
+                      color: kWhite,
+                      fontSize: 18.0,
+                      fontWeight: FontWeight.normal,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            // bottom spacing
+            SizedBox(height: 20.0),
+          ],
         ),
       ),
-    );
+    ));
   }
 }
