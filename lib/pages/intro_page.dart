@@ -16,7 +16,9 @@ class IntroPage extends StatelessWidget {
 
             // button
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, '/home');
+              },
               child: Container(
                 decoration: BoxDecoration(
                   color: kPrimaryGreen,
