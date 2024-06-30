@@ -19,8 +19,7 @@ class MySearchBar extends StatelessWidget {
         ),
       ),
       child: Padding(
-        padding:
-            const EdgeInsets.symmetric(horizontal: 15, vertical: 6),
+        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 4),
         child: Row(
           children: [
             // search icon
@@ -32,7 +31,7 @@ class MySearchBar extends StatelessWidget {
               color: kTextGray,
             ),
             const SizedBox(width: 10),
-    
+
             Expanded(
               child: TextField(
                 decoration: InputDecoration(
@@ -45,7 +44,7 @@ class MySearchBar extends StatelessWidget {
                 ),
               ),
             ),
-    
+
             // textfield
           ],
         ),
