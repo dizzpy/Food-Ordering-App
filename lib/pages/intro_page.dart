@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_odering_app/themes/color.dart';
 
 class IntroPage extends StatelessWidget {
   const IntroPage({super.key});
@@ -7,7 +8,10 @@ class IntroPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Center(
-        child: Text('Intro Page'),
+        child: Text(
+          'Intro Page',
+          style: TextStyle(color: kPrimaryGreen),
+        ),
       ),
     );
   }
