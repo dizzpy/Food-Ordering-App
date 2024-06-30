@@ -7,3 +7,4 @@ const Color kOutLine = Color(0xFFEBEBEF);
 
 const Color kBlack = Color(0xFF000010);
 const Color kTextGray = Color(0xFF546076);
+const Color kTextLightGray = Color(0xFF8F9BAC);

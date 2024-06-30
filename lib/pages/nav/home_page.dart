@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:food_odering_app/components/my_search_bar.dart';
 import 'package:food_odering_app/themes/color.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -10,6 +11,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        backgroundColor: kWhite,
         body: Center(
           child: Padding(
             padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 25),
@@ -25,7 +27,7 @@ class HomePage extends StatelessWidget {
                           borderRadius: BorderRadius.circular(9),
                           border: Border.all(
                             color: kOutLine,
-                            width: 2,
+                            width: 1,
                           ),
                         ),
                         child: Padding(
@@ -100,7 +102,9 @@ class HomePage extends StatelessWidget {
                   ],
                 ),
 
+                SizedBox(height: 20),
                 // search bar
+                MySearchBar(),
 
                 // Recommended for you title
 
