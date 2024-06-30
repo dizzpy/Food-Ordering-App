@@ -103,10 +103,28 @@ class HomePage extends StatelessWidget {
                 ),
 
                 SizedBox(height: 20),
+
                 // search bar
                 MySearchBar(),
 
+                SizedBox(height: 20),
+
                 // Recommended for you title
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Recommended for you',
+                      style: GoogleFonts.poppins(
+                        textStyle: TextStyle(
+                          fontSize: 18,
+                          color: kTextGray,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
 
                 // food card row
 
