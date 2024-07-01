@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:food_odering_app/components/my_search_bar.dart';
+import 'package:food_odering_app/components/single_food_card.dart';
 import 'package:food_odering_app/themes/color.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -126,7 +127,10 @@ class HomePage extends StatelessWidget {
                   ],
                 ),
 
+                SizedBox(height: 20),
+
                 // food card row
+                SingleFoodCard()
 
                 // add banner
 
