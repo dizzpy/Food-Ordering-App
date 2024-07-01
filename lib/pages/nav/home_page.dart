@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:food_odering_app/components/food_item_tab.dart';
 import 'package:food_odering_app/components/my_search_bar.dart';
 import 'package:food_odering_app/components/single_food_card.dart';
 import 'package:food_odering_app/themes/color.dart';
@@ -135,7 +136,7 @@ class HomePage extends StatelessWidget {
                   height: 251,
                   child: ListView.builder(
                     scrollDirection: Axis.horizontal,
-                    itemCount: 10,
+                    itemCount: 3,
                     itemBuilder: (context, index) {
                       return Padding(
                         padding: const EdgeInsets.only(right: 10),
@@ -148,7 +149,22 @@ class HomePage extends StatelessWidget {
                 // add banner
 
                 // food tab bar
-
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      SingleFoodTabItem(
+                        tabItem: 'All Foods',
+                      ),
+                      SingleFoodTabItem(
+                        tabItem: '❤️ Favorites',
+                      ),
+                      SingleFoodTabItem(
+                        tabItem: '🥦 Low Calorie',
+                      ),
+                    ],
+                  ),
+                )
                 // horizontal list of food cards
               ],
             ),
