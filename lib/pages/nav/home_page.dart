@@ -132,10 +132,10 @@ class HomePage extends StatelessWidget {
 
                 // food card row
                 Container(
-                  height: 290,
+                  height: 251,
                   child: ListView.builder(
                     scrollDirection: Axis.horizontal,
-                    itemCount: 10, // Number of cards you want to display
+                    itemCount: 10,
                     itemBuilder: (context, index) {
                       return Padding(
                         padding: const EdgeInsets.only(right: 10),
