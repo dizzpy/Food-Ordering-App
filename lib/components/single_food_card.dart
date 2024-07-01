@@ -10,6 +10,7 @@ class SingleFoodCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: 200,
       decoration: BoxDecoration(
         color: kWhite,
         borderRadius: BorderRadius.circular(12),
@@ -28,68 +29,31 @@ class SingleFoodCard extends StatelessWidget {
               borderRadius: BorderRadius.circular(9),
               child: Image.network(
                 'https://www.thecookierookie.com/wp-content/uploads/2023/04/featured-stovetop-burgers-recipe.jpg',
-                width: 150,
-                height: 150,
+                width: 170,
+                height: 170,
+                fit: BoxFit.cover,
               ),
             ),
-    
+
             // food name
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 8.0),
-              child: Row(
-                children: [
-                  Text(
-                    'Burger',
-                    style: GoogleFonts.poppins(
-                      textStyle: TextStyle(
-                        fontSize: 18,
-                        color: kBlack,
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
+              child: Text(
+                'Burger',
+                style: GoogleFonts.poppins(
+                  textStyle: TextStyle(
+                    fontSize: 18,
+                    color: kBlack,
+                    fontWeight: FontWeight.w500,
                   ),
-                ],
+                ),
               ),
             ),
-    
+
             // row of price and add button
             Row(
-              children: [
-                Text(
-                  '\$12.99',
-                  style: GoogleFonts.poppins(
-                    textStyle: TextStyle(
-                      fontSize: 18,
-                      color: kBlack,
-                      fontWeight: FontWeight.w500,
-                    ),
-                  ),
-                ),
-                Spacer(),
-                Container(
-                  decoration: BoxDecoration(
-                    color: kPrimaryGreen,
-                    borderRadius: BorderRadius.circular(6),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                      vertical: 0,
-                      horizontal: 8,
-                    ),
-                    child: Text(
-                      '+',
-                      style: GoogleFonts.poppins(
-                        textStyle: TextStyle(
-                          fontSize: 22,
-                          color: kWhite,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            )
+              children: [Text('16.99')],
+            ),
           ],
         ),
       ),

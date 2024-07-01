@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:food_odering_app/components/my_search_bar.dart';
 import 'package:food_odering_app/components/single_food_card.dart';
 import 'package:food_odering_app/themes/color.dart';
@@ -80,8 +80,9 @@ class HomePage extends StatelessWidget {
                                 child: Text(
                                   'Edit',
                                   style: TextStyle(
-                                      color: kPrimaryGreen,
-                                      fontWeight: FontWeight.w600),
+                                    color: kPrimaryGreen,
+                                    fontWeight: FontWeight.w600,
+                                  ),
                                 ),
                               ),
                             ],
@@ -130,7 +131,19 @@ class HomePage extends StatelessWidget {
                 SizedBox(height: 20),
 
                 // food card row
-                SingleFoodCard()
+                Container(
+                  height: 290,
+                  child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: 10, // Number of cards you want to display
+                    itemBuilder: (context, index) {
+                      return Padding(
+                        padding: const EdgeInsets.only(right: 10),
+                        child: SingleFoodCard(),
+                      );
+                    },
+                  ),
+                ),
 
                 // add banner
 
